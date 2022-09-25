@@ -88,7 +88,7 @@ before_show_menu() {
 }
 
 install() {
-    bash <(curl -Ls https://raw.githubusercontent.com/taffychan/x-ui/main/install.sh)
+    bash <(curl -Ls https://gitlab.com/misakablog/x-ui/-/raw/main/install.sh)
     if [[ $? == 0 ]]; then
         if [[ $# == 0 ]]; then
             start
