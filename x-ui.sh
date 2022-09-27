@@ -451,8 +451,8 @@ update_geo(){
 }
 
 checkv4v6(){
-    v6=$(curl -s6m8 https://ip.gs -k)
-    v4=$(curl -s4m8 https://ip.gs -k)
+    v6=$(curl -s6m8 ip.p3terx.com -k | sed -n 1p)
+    v4=$(curl -s4m8 ip.p3terx.com -k | sed -n 1p)
 }
 
 check_login_info(){
