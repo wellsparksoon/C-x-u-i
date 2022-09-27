@@ -72,8 +72,8 @@ info_bar(){
 }
 
 checkv4v6(){
-    v6=$(curl -s6m8 ip.p3terx.com -k | sed -n 1p)
-    v4=$(curl -s4m8 ip.p3terx.com -k | sed -n 1p)
+    v6=$(curl -s6m8 api64.ipify.org -k)
+    v4=$(curl -s4m8 api64.ipify.org -k)
 }
 
 check_status(){
