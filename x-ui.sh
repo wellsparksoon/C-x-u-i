@@ -461,8 +461,10 @@ check_login_info(){
     WgcfIPv6Status=$(curl -s6m8 https://www.cloudflare.com/cdn-cgi/trace -k | grep warp | cut -d= -f2)
     if [[ $WgcfIPv4Status =~ "on"|"plus" ]] || [[ $WgcfIPv6Status =~ "on"|"plus" ]]; then
         wg-quick down wgcf >/dev/null 2>&1
+        systemctl stop warp-go >/dev/null 2>&1
         checkv4v6
         wg-quick up wgcf >/dev/null 2>&1
+        systemctl start warp-go >/dev/null 2>&1
     else
         checkv4v6
     fi    
