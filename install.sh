@@ -160,24 +160,6 @@ panel_config() {
 install_xui() {
     info_bar
     
-    if [[ -e /usr/local/x-ui/ ]]; then
-        yellow "检测到目前已安装x-ui面板, 确认卸载原x-ui面板?"
-        read -rp "请输入选项 [Y/N, 默认N]: " yn
-        if [[ $yn =~ "Y"|"y" ]]; then
-            systemctl stop x-ui
-            systemctl disable x-ui
-            rm /etc/systemd/system/x-ui.service -f
-            systemctl daemon-reload
-            systemctl reset-failed
-            rm /etc/x-ui/ -rf
-            rm /usr/local/x-ui/ -rf
-            rm /usr/bin/x-ui -f
-        else
-            red "已取消卸载, 脚本退出!"
-            exit 1
-        fi
-    fi
-    
     systemctl stop x-ui >/dev/null 2>&1
     
     install_base
