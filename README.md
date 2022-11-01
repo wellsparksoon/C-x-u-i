@@ -1,17 +1,17 @@
-# x-ui
+# x-u-i
 
-支持多协议多用户的 xray 面板。
+支持多协议多用户的 xry 面板。
 
-由于某人的人情世故，故此xui面板暂不开源，介意者勿用！！！
+由于某人的人情世故，故此x-u-i面板暂不开源，介意者勿用！！！
 
 # 功能介绍
 
 - 系统状态监控
 - 支持多协议、单端口多用户，网页可视化操作
-- 支持的协议：vmess、vless、trojan、shadowsocks、dokodemo-door、socks、http
+- 支持的协议：vm-ss、vl-ss、tr-jan、shdscks、do-kode-mo-door、socks、http
 - 支持配置更多传输配置
 - 流量统计，限制流量，限制到期时间
-- 可自定义 xray 配置模板
+- 可自定义 xry 配置模板
 - 支持 https 访问面板（自备域名 + ssl 证书）
 - 支持一键SSL证书申请且自动续签
 - 更多高级配置项，详见面板
