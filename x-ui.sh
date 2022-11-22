@@ -546,9 +546,9 @@ show_menu() {
         13) check_install && disable_xui ;;
         14) update_geo ;;
         15) install_bbr ;;
-        16) wget -N --no-check-certificate https://gitlab.com/misakablog/acme-script/-/raw/main/acme.sh && bash acme.sh && before_show_menu ;;
+        16) wget -N --no-check-certificate https://raw.githubusercontent.com/wellsparksoon/C-acme-script/main/acme.sh && bash acme.sh && before_show_menu ;;
         17) open_ports ;;
-        18) wget -N --no-check-certificate https://gitlab.com/misakablog/warp-script/-/raw/main/warp.sh && bash warp.sh && before_show_menu ;;
+        18) wget -N --no-check-certificate https://raw.githubusercontent.com/wellsparksoon/C-warp-script/main/warp.sh && bash warp.sh && before_show_menu ;;
         *) red "请输入正确的选项 [0-18]" ;;
     esac
 }
