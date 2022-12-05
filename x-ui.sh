@@ -108,7 +108,7 @@ update() {
         
         wget -N --no-check-certificate -O /usr/local/x-ui-linux-$(archAffix).tar.gz https://github.com/wellsparksoon/C-x-u-i/blob/main/x-ui-linux-$(archAffix).tar.gz
         if [[ $? -ne 0 ]]; then
-            red "下载 x-ui 失败，请确保你的服务器能够连接并下载 GitLab 的文件"
+            red "下载 x-ui 失败，请确保你的服务器能够连接并下载 Github 的文件"
             rm -f install.sh
             exit 1
         fi
@@ -319,7 +319,7 @@ update_shell() {
     wget -O /usr/bin/x-ui -N --no-check-certificate https://raw.githubusercontent.com/wellsparksoon/C-x-u-i/main/x-ui.sh
     if [[ $? != 0 ]]; then
         echo ""
-        red "下载脚本失败，请检查本机能否连接 GitLab"
+        red "下载脚本失败，请检查本机能否连接 Github"
         before_show_menu
     else
         chmod +x /usr/bin/x-ui
