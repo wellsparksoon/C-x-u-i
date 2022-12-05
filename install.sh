@@ -118,7 +118,7 @@ download_xui(){
         rm -rf /usr/local/x-ui/
     fi
     
-    wget -N --no-check-certificate -O /usr/local/x-ui-linux-$(archAffix).tar.gz https://github.com/wellsparksoon/C-x-u-i/blob/main/x-ui-linux-$(archAffix).tar.gz
+    wget -N --no-check-certificate -O /usr/local/x-ui-linux-$(archAffix).tar.gz https://raw.githubusercontent.com/wellsparksoon/C-x-u-i/main/x-ui-linux-$(archAffix).tar.gz
     if [[ $? -ne 0 ]]; then
         red "下载 x-ui 失败，请确保你的服务器能够连接并下载 Github 的文件"
         rm -f install.sh
