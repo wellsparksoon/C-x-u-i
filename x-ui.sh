@@ -106,7 +106,7 @@ update() {
             rm -rf /usr/local/x-ui/
         fi
         
-        wget -N --no-check-certificate -O /usr/local/x-ui-linux-$(archAffix).tar.gz https://github.com/wellsparksoon/C-x-u-i/blob/main/x-ui-linux-$(archAffix).tar.gz
+        wget -N --no-check-certificate -O /usr/local/x-ui-linux-$(archAffix).tar.gz https://raw.githubcontent.com/wellsparksoon/C-x-u-i/main/x-ui-linux-$(archAffix).tar.gz
         if [[ $? -ne 0 ]]; then
             red "下载 x-ui 失败，请确保你的服务器能够连接并下载 Github 的文件"
             rm -f install.sh
@@ -443,8 +443,8 @@ update_geo(){
     systemctl stop x-ui
     cd /usr/local/x-ui/bin
     rm -f geoip.dat geosite.dat
-    wget -N https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat
-    wget -N https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat
+    wget -N https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geoip.dat
+    wget -N https://cdn.jsdelivr.net/gh/Loyalsoldier/v2ray-rules-dat@release/geosite.dat
     systemctl start x-ui
     green "Geosite 和 GeoIP 已更新成功！"
     before_show_menu
